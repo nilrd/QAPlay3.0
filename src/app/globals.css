@@ -1,26 +1,177 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Estilos personalizados para o QA Play */
+.dark {
+  background-color: #1A202C;
+  color: #F7FAFC;
+}
+
+.light {
+  background-color: #FFFFFF;
+  color: #2D3748;
+}
+
+/* Animações personalizadas */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Estilos para modais */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Estilos para botões */
+.btn-primary {
+  @apply bg-qaplay-blue hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-success {
+  @apply bg-qaplay-green hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+/* Estilos para cards */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-200 hover:shadow-xl;
+}
+
+/* Estilos para quiz */
+.quiz-option {
+  @apply border-2 border-gray-300 dark:border-gray-600 rounded-lg p-4 cursor-pointer transition-all duration-200 hover:border-qaplay-blue;
+}
+
+.quiz-option.selected {
+  @apply border-qaplay-blue bg-blue-50 dark:bg-blue-900/20;
+}
+
+.quiz-option.correct {
+  @apply border-qaplay-green bg-green-50 dark:bg-green-900/20;
+}
+
+.quiz-option.incorrect {
+  @apply border-red-500 bg-red-50 dark:bg-red-900/20;
+}
+
+/* Estilos para progress bar */
+.progress-bar {
+  @apply w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2;
+}
+
+.progress-fill {
+  @apply bg-qaplay-blue h-2 rounded-full transition-all duration-300;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .heading-lg {
+    @apply text-3xl;
+  }
+  
+  .heading-md {
+    @apply text-2xl;
+  }
+}
+
+/* Estilos para acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles para acessibilidade */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-qaplay-blue ring-offset-2 ring-offset-white dark:ring-offset-gray-800;
+}
+
+/* Estilos para badges */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400;
 }
