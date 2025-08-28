@@ -19,7 +19,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-qaplay-darkbg border-b border-gray-700 sticky top-0 z-50">
+    <header className="bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -43,7 +43,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-qaplay-blue transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 font-medium"
               >
                 {item.label}
               </Link>
@@ -53,7 +53,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-qaplay-blue"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
             aria-expanded="false"
           >
             <span className="sr-only">Abrir menu principal</span>
@@ -101,7 +101,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-300 hover:text-qaplay-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  className="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

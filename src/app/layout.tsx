@@ -46,14 +46,9 @@ export const metadata: Metadata = {
     images: ['/logo-qaplay.png'],
   },
   viewport: 'width=device-width, initial-scale=1',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
-    { media: '(prefers-color-scheme: dark)', color: '#1A202C' },
-  ],
+  themeColor: '#1A202C',
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
   },
 }
 
@@ -64,16 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${roboto.variable}`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#1A202C" />
-        <meta name="theme-color" content="#1A202C" />
-      </head>
-      <body className={`${inter.className} min-h-screen flex flex-col bg-qaplay-darkbg dark:bg-qaplay-darkbg text-white`}>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-1">
           {children}

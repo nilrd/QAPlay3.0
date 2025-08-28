@@ -49,7 +49,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-qaplay-darkbg text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto text-center">
@@ -61,7 +61,7 @@ export default function Home() {
               height={120}
               className="mx-auto mb-6"
             />
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-qaplay-blue to-qaplay-green bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
               QA Play
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -78,9 +78,9 @@ export default function Home() {
       </section>
 
       {/* Resumo do Currículo */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-qaplay-blue">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-400">
             Sobre Nilson da Silva Brites
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -100,7 +100,7 @@ export default function Home() {
       {/* Ferramentas e Tecnologias */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-qaplay-green">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-green-400">
             Ferramentas e Tecnologias
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -109,12 +109,12 @@ export default function Home() {
                 key={index}
                 className="card text-center p-4 hover:scale-105 transform transition-all duration-200"
               >
-                <span className="font-medium text-qaplay-blue">{framework}</span>
+                <span className="font-medium text-blue-400">{framework}</span>
               </div>
             ))}
           </div>
           <div className="mt-12 text-center">
-            <h3 className="text-2xl font-bold mb-6 text-qaplay-blue">Frameworks em Destaque</h3>
+            <h3 className="text-2xl font-bold mb-6 text-blue-400">Frameworks em Destaque</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {['Selenium com Cucumber/JUnit', 'Playwright', 'Cypress', 'Postman'].map((framework, index) => (
                 <span
@@ -130,9 +130,9 @@ export default function Home() {
       </section>
 
       {/* Projetos em Destaque */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-qaplay-green">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-green-400">
             Projetos em Destaque
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -141,7 +141,7 @@ export default function Home() {
                 key={index}
                 className="card hover:scale-105 transform transition-all duration-200"
               >
-                <h3 className="text-xl font-bold mb-4 text-qaplay-blue">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-blue-400">{project.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
@@ -162,14 +162,14 @@ export default function Home() {
       {/* Sobre Nilson */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-qaplay-blue">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-blue-400">
             A Mentalidade QA
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               <strong>Nilson da Silva Brites</strong> é um QA apaixonado por tecnologia, IAs e qualidade. Curioso, com habilidades em liderança, cria projetos únicos.
             </p>
-            <blockquote className="text-2xl md:text-3xl font-bold text-qaplay-green italic mb-8">
+            <blockquote className="text-2xl md:text-3xl font-bold text-green-400 italic mb-8">
               "O impossível já foi feito; o novo é pioneirismo – a evolução tecnológica prova isso."
             </blockquote>
             <button
