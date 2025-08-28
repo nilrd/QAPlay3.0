@@ -170,7 +170,7 @@ export default function Home() {
               <strong>Nilson da Silva Brites</strong> é um QA apaixonado por tecnologia, IAs e qualidade. Curioso, com habilidades em liderança, cria projetos únicos.
             </p>
             <blockquote className="text-2xl md:text-3xl font-bold text-green-400 italic mb-8">
-              "O impossível já foi feito; o novo é pioneirismo – a evolução tecnológica prova isso."
+              &ldquo;O impossível já foi feito; o novo é pioneirismo – a evolução tecnológica prova isso.&rdquo;
             </blockquote>
             <button
               onClick={openContactModal}

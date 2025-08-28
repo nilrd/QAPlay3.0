@@ -248,7 +248,7 @@ export default function Blog() {
                     .replace(/\*\*(.*?)\*\*/g, '<strong class="text-blue-400">$1</strong>')
                     .replace(/- \*\*(.*?)\*\*/g, '<li><strong class="text-green-400">$1</strong>')
                     .replace(/- (.*?)<br>/g, '<li>$1</li>')
-                    .replace(/```(\w+)\n(.*?)```/gs, '<pre class="bg-gray-800 p-4 rounded-lg overflow-x-auto"><code class="language-$1">$2</code></pre>')
+                    .replace(/```(\w+)\n(.*?)```/g, '<pre class="bg-gray-800 p-4 rounded-lg overflow-x-auto"><code class="language-$1">$2</code></pre>')
                     .replace(/`(.*?)`/g, '<code class="bg-gray-800 px-2 py-1 rounded text-blue-300">$1</code>')
                 }}
               />
@@ -371,7 +371,7 @@ export default function Blog() {
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-400 text-lg">
-                Nenhum artigo encontrado para a categoria "{selectedCategory}".
+                Nenhum artigo encontrado para a categoria &ldquo;{selectedCategory}&rdquo;.
               </p>
             </div>
           )}
